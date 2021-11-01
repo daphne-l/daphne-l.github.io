@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+			background-color: #5aa66e;
+			overflow: hidden;
+		}
+		.thing{
+			width:100px;
+			height:100px;
+			background-color: #458054;
+
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		function makedivs() {
+			var something = document.createElement("div")
+
+			document.body.appendChild(something)
+			something.classList.add("thing")
+		}
+		makedivs();
+	setInterval(makedivs, 500)
+
+	
+var divs = document.getElementsByTagName('div');
+
+var winWidth = window.innerWidth;
+var winHeight = window.innerHeight;
+
+
+for (var i = 0; i < divs.length; i++) {
+
+
+  var thisDiv = divs[i];
+
+
+  randomTop = getRandomNumber(0, winHeight);
+  randomLeft = getRandomNumber(0, winWidth);
+
+
+  thisDiv.style.top = randomTop + "px";
+  thisDiv.style.left = randomLeft + "px";
+
+}
+
+
+function getRandomNumber(min, max) {
+
+  return Math.random() * (max - min) + min;
+
+}
+
+		
+	</script>
+</body>
+</html>

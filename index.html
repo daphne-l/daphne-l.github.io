@@ -57,13 +57,36 @@
 			position: absolute;
 			left: 850px;
 			top:30px;
-
+}
+		#instructions{
+			font-size: 30px;
+			color: white;
+			position: absolute;
+			left: 850px;
+			top: 500px;
 
 }
 
 	</style>
 </head>
 <body>
+
+	<script type="text/javascript">
+	
+		var change = document.getElementById("instructions");
+
+
+			change.addEventListener("click",
+				function spin() {
+					change.style.transform = "rotate(720deg)";
+					
+				})
+		
+			
+		
+	</script>
+
+	<div id="instructions"><p>testing</p></div>
 
 	<div id="title"><h1 >Daphne's <br>Apartment </h1></div>
 
