@@ -10,49 +10,33 @@
 			width:100px;
 			height:100px;
 			background-color: #458054;
+			 
+
 
 		}
 	</style>
 </head>
 <body>
+	<button onclick="document.getElementById('demo').innerHTML = getRandomNumber(0,1000)">Click Me</button>
+
+	<p id="demo"></p>
+
 	<script type="text/javascript">
 		function makedivs() {
 			var something = document.createElement("div")
 
 			document.body.appendChild(something)
 			something.classList.add("thing")
+			div.style.top
 		}
 		makedivs();
 	setInterval(makedivs, 500)
 
-	
-var divs = document.getElementsByTagName('div');
-
-var winWidth = window.innerWidth;
-var winHeight = window.innerHeight;
-
-
-for (var i = 0; i < divs.length; i++) {
-
-
-  var thisDiv = divs[i];
-
-
-  randomTop = getRandomNumber(0, winHeight);
-  randomLeft = getRandomNumber(0, winWidth);
-
-
-  thisDiv.style.top = randomTop + "px";
-  thisDiv.style.left = randomLeft + "px";
-
-}
-
-
 function getRandomNumber(min, max) {
-
-  return Math.random() * (max - min) + min;
-
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
+
+
 
 		
 	</script>
