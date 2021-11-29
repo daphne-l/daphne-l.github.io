@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body {
+			overflow:hidden;
+		}
+
+		h1 {
+
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<script type="text/javascript">
+
+		function makeCookie() {
+			var cookie= document.createElement("div")
+			document.body.appendChild(cookie);
+			cookie.style.backgroundImage="url(AcquaintFate.png)";
+			cookie.style.backgroundSize="cover";
+			cookie.style.height="150px";
+			cookie.style.width="150px";
+			cookie.style.display="inline-block";
+
+
+			cookie.addEventListener("click", function (){
+				cookie.style.backgroundImage="red"}
+				)
+
+			function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+} //end of function//
+			
+
+
+setInterval(makeCookie, 50)
+	</script>
+	<h1 ></h1>
+</body>
+</html>
