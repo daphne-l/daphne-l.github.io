@@ -16,10 +16,58 @@
 	</style>
 </head>
 <body>
+
+		<div id="box"></div>
+
 	<script type="text/javascript">
-		
+
+
+		var square = document.getElementById('box');
+
+
+		square.addEventListener('click', function(){
+			console.log('hi daphne!')
+		})
+
+
+//this is me writing a function. It has an input and and output. The output is in the curly brackets. The input (which we're  not using at the moment is the parenthesis)
+
+		// function sayHello (dog) {
+		// 	console.log("hello " + dog);
+		// }
+
+		// sayHello("daphe!")
+
+		var y = 
+			["common1", "common1", "common1", "common1", "common1","common1", "common1", "common1", "common1", "common1", 
+
+			"common2", "common2", "common2", "common2", "common2","common2", "common2", "common2", "common2", "common2",
+
+			"common3", "common3", "common3", "common3", "common3","common3", "common3", "common3", "common3", "common3",
+
+			"common4", "common4", "common4", "common4", "common4","common4", "common4", "common4", "common4", "common4",
+
+			"common1", "common1", "common1", "common1", "common1","common1", "common1", "common2", "common2", "common2",
+
+			"common2", "common2", "common2", "common2", "common3","common3", "common3", "common3", "common3", "common3",
+
+			"common3", "common4", "common4", "common4", "common4","common4", "common4", "common4", "common1", "common2",
+
+			"uncommon1", "uncommon1", "uncommon1", "uncommon1", "uncommon1","uncommon2", "uncommon2", "uncommon2", "uncommon2", "uncommon2",
+
+			"uncommon3", "uncommon3", "uncommon3", "uncommon3", "legendary","legendary", "legendary", "legendary", "legendary", "legendary",
+
+			"rare1", "rare1", "rare1", "rare1", "rare1","rare2", "rare2", "rare2", "rare2", "rare2", "godly",]
+			
+
+
+		var cat = Math.round(Math.random()*100+2)
+
+		console.log(y[cat])
+
+
+
 	</script>
-	<div id="box"></div>
 </div>
 </body>
 </html>
