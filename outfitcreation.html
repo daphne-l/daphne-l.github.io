@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<style type="text/css">
+
+		body{
+			background-color: #bda799;
+			overflow: hidden;
+		}
+		#arrow{
+			background-image: url(arrow.png);
+			width:250px;
+			height:250px;
+			position: absolute;
+			top: 210px;
+			left: 400px;
+			transform:rotate(-10deg);
+			background-size:contain;
+			background-repeat: no-repeat;
+  			background-position: center;
+			transition:.3s;
+			opacity: 1;
+		}
+
+		#shirt{
+			background-color: ;
+			width:250px;
+			height:250px;
+			position: absolute;
+			top: 80px;
+			left: 600px;
+			background-size:contain;
+			background-repeat: no-repeat;
+  			background-position: center;
+			transition:.3s;
+		}
+
+		#pant{
+			background-color: ;
+			width:350px;
+			height:350px;
+			position: absolute;
+			top: 300px;
+			left: 552px;
+			background-size:contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			transition:.3s;
+			z-index: -1;
+		}
+
+		#shoe{
+			background-color: ;
+			width:150px;
+			height:150px;
+			position: absolute;
+			top: 620px;
+			left: 650px;
+			background-size:contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			transition:.3s;
+			z-index: -2;
+		}
+
+		#belt{
+			background-color: ;
+			width:150px;
+			height:150px;
+			position: absolute;
+			top: 300px;
+			left: 270px;
+			background-size:contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			transition:.3s;
+		}
+
+		#ins{
+			position: absolute;
+			top: 20px;
+			left: 430px;
+			font-size: 50px;
+			font-family: sans-serif;
+			font-weight: 500;
+			color: #947a6a;
+			font-style: italic;
+			transition:.3s;
+		}
+
+		#shirtl{
+			position: absolute;
+			top: 150px;
+			left: 690px;
+			font-size: 30px;
+			font-family: sans-serif;
+			font-weight: 500;
+			color: #947a6a;
+			font-style: italic;
+			transition:.3s;
+			z-index: -10;
+		}
+
+		#pantl{
+			position: absolute;
+			top: 400px;
+			left: 685px;
+			font-size: 30px;
+			font-family: sans-serif;
+			font-weight: 500;
+			color: #947a6a;
+			font-style: italic;
+			transition:.3s;
+			z-index: -10;
+		}
+
+		#shoel{
+			position: absolute;
+			top: 650px;
+			left: 685px;
+			font-size: 30px;
+			font-family: sans-serif;
+			font-weight: 500;
+			color: #947a6a;
+			font-style: italic;
+			transition:.3s;
+			z-index: -10;
+		}
+
+		#beltl{
+			position: absolute;
+			top: 320px;
+			left: 320px;
+			font-size: 30px;
+			font-family: sans-serif;
+			font-weight: 500;
+			color: #947a6a;
+			font-style: italic;
+			transition:.3s;
+			z-index: -10;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="arrow"></div>
+	<div id="shirt"></div>
+	<div id="pant"></div>
+	<div id="shoe"></div>
+	<div id="belt"></div>
+	<div id="ins"> <p> click to generate clothing <33 </p> </div>
+	<div id="shirtl"> <p> shirt </p> </div>
+	<div id="pantl"> <p> pants </p> </div>
+	<div id="shoel"> <p> shoe </p> </div>
+	<div id="beltl"> <p> belt </p> </div>
+
+	<script type="text/javascript">
+
+		var arrow= document.getElementById("arrow");
+		arrow.style.opacity=0
+		pant.addEventListener("click", function() { 
+		arrow.style.opacity=1})
+		belt.addEventListener("click", function() { 
+		arrow.style.opacity=1})
+
+		var shirts =
+		["shirt1", "shirt2", "shirt3", "shirt4", "shirt5", "shirt6", "shirt7"]
+
+		shirt.addEventListener("click", function(){
+			var math = Math.round(Math.random()*6)
+			console.log(math);
+
+			console.log(shirts[math])
+
+			var shirtImage = document.getElementById("shirt");
+		shirtImage.style.backgroundImage =  "url(" + shirts[math] +".png)";
+
+		ins.style.opacity = 0;
+		shirtl.style.opacity =0;
+	})
+
+		var pants =
+		["pant1", "pant2", "pant3", "pant4", "pant5"]
+
+		pant.addEventListener("click", function(){
+			var math = Math.round(Math.random()*4)
+			console.log(math);
+
+			console.log(pants[math])
+
+			var pantImage = document.getElementById("pant");
+		pantImage.style.backgroundImage =  "url(" + pants[math] +".png)";
+
+		ins.style.opacity = 0;
+		pantl.style.opacity =0;
+	})
+
+		var shoes =
+		["shoe1", "shoe2", "shoe3"]
+
+		shoe.addEventListener("click", function(){
+			var math = Math.round(Math.random()*2)
+			console.log(math);
+
+			console.log(shoes[math])
+
+			var shoeImage = document.getElementById("shoe");
+		shoeImage.style.backgroundImage =  "url(" + shoes[math] +".png)";
+
+		ins.style.opacity = 0;
+		shoel.style.opacity =0;
+	})
+
+		var belts =
+		["belt1", "belt2", "belt3", "belt4"]
+
+		belt.addEventListener("click", function(){
+			var math = Math.round(Math.random()*3)
+			console.log(math);
+
+			console.log(belts[math])
+
+			var beltImage = document.getElementById("belt");
+		beltImage.style.backgroundImage =  "url(" + belts[math] +".png)";
+
+		ins.style.opacity = 0;
+		beltl.style.opacity =0;
+	})
+
+
+	</script>
+
+</body>
+</html>
