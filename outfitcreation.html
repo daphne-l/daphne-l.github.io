@@ -13,7 +13,7 @@
 			width:250px;
 			height:250px;
 			position: absolute;
-			top: 210px;
+			top: 220px;
 			left: 400px;
 			transform:rotate(-10deg);
 			background-size:contain;
@@ -157,6 +157,11 @@
 
 	<script type="text/javascript">
 
+		var shirtCounter = 0;
+		var pantsCounter =0;
+		var shoesCounter =0;
+		var beltCounter = 0;
+
 		var arrow= document.getElementById("arrow");
 		arrow.style.opacity=0
 		pant.addEventListener("click", function() { 
@@ -166,31 +171,36 @@
 
 		var shirts =
 		["shirt1", "shirt2", "shirt3", "shirt4", "shirt5", "shirt6", "shirt7"]
-
 		shirt.addEventListener("click", function(){
-			var math = Math.round(Math.random()*6)
-			console.log(math);
+			shirtCounter = shirtCounter +1;
+			// var math = Math.round(Math.random()*6)
+			console.log(shirtCounter);
 
-			console.log(shirts[math])
+			console.log(shirts[shirtCounter])
+
+			if (shirtCounter > 6) {shirtCounter = 0}
 
 			var shirtImage = document.getElementById("shirt");
-		shirtImage.style.backgroundImage =  "url(" + shirts[math] +".png)";
+		shirtImage.style.backgroundImage =  "url(" + shirts[shirtCounter] +".png)";
 
 		ins.style.opacity = 0;
 		shirtl.style.opacity =0;
 	})
 
 		var pants =
-		["pant1", "pant2", "pant3", "pant4", "pant5"]
+		["pant1", "pant2", "pant3", "pant4", "pant5", "pant6"]
 
 		pant.addEventListener("click", function(){
-			var math = Math.round(Math.random()*4)
-			console.log(math);
+			pantsCounter = pantsCounter +1;
+			// var math = Math.round(Math.random()*5)
+			console.log(pantsCounter);
 
-			console.log(pants[math])
+			console.log(pants[pantsCounter])
+
+			if (pantsCounter > 5) {pantsCounter = 0}
 
 			var pantImage = document.getElementById("pant");
-		pantImage.style.backgroundImage =  "url(" + pants[math] +".png)";
+		pantImage.style.backgroundImage =  "url(" + pants[pantsCounter] +".png)";
 
 		ins.style.opacity = 0;
 		pantl.style.opacity =0;
@@ -200,13 +210,16 @@
 		["shoe1", "shoe2", "shoe3"]
 
 		shoe.addEventListener("click", function(){
-			var math = Math.round(Math.random()*2)
-			console.log(math);
+			shoesCounter = shoesCounter +1;
+			// var math = Math.round(Math.random()*2)
+			console.log(shoesCounter);
 
-			console.log(shoes[math])
+			console.log(shoes[shoesCounter])
+
+			if (shoesCounter > 2) {shoesCounter = 0}
 
 			var shoeImage = document.getElementById("shoe");
-		shoeImage.style.backgroundImage =  "url(" + shoes[math] +".png)";
+		shoeImage.style.backgroundImage =  "url(" + shoes[shoesCounter] +".png)";
 
 		ins.style.opacity = 0;
 		shoel.style.opacity =0;
@@ -216,13 +229,16 @@
 		["belt1", "belt2", "belt3", "belt4"]
 
 		belt.addEventListener("click", function(){
-			var math = Math.round(Math.random()*3)
-			console.log(math);
+			beltCounter = beltCounter +1;
+			// var math = Math.round(Math.random()*3)
+			console.log(beltCounter);
 
-			console.log(belts[math])
+			console.log(belts[beltCounter])
+
+			if (beltCounter > 3) {beltCounter = 0}
 
 			var beltImage = document.getElementById("belt");
-		beltImage.style.backgroundImage =  "url(" + belts[math] +".png)";
+		beltImage.style.backgroundImage =  "url(" + belts[beltCounter] +".png)";
 
 		ins.style.opacity = 0;
 		beltl.style.opacity =0;
