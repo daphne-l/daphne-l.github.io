@@ -248,7 +248,10 @@
 	<script type="text/javascript">
 		var shirtClickCounter=0;
 		var necklaceClickCounter=0;
-		var pantsClickCounter=0
+		var pantsClickCounter=0;
+		var beltClickCounter=0;
+		var shoesClickCounter=0;
+		var sockClickCounter=0;
 
 		var shirtCounter = 0;
 		var pantsCounter =0;
@@ -286,7 +289,7 @@
 
 
 			shirtCounter = shirtCounter +1;
-			// var math = Math.round(Math.random()*6)
+			
 			console.log(shirtCounter);
 
 			console.log(shirts[shirtCounter])
@@ -300,17 +303,18 @@
 		shirtl.style.opacity =0;
 		necklacel.style.opacity =1;
 
-		if (shirtClickCounter>1 && necklaceClickCounter>1){necklacel.style.opacity =0};
+		if (shirtClickCounter>=1 && necklaceClickCounter>=1){necklacel.style.opacity =0};
 		
 		
 	})
 
 		var pants =
 		["pant1", "pant2", "pant3", "pant4", "pant5", "pant6"]
-
 		pant.addEventListener("click", function(){
+			pantsClickCounter = pantsClickCounter +1;
+
 			pantsCounter = pantsCounter +1;
-			// var math = Math.round(Math.random()*5)
+			
 			console.log(pantsCounter);
 
 			console.log(pants[pantsCounter])
@@ -323,14 +327,18 @@
 		ins.style.opacity = 0;
 		pantl.style.opacity =0;
 		beltl.style.opacity =1;
+
+		if (pantsClickCounter>=1 && beltClickCounter>=1){beltl.style.opacity =0};
 	})
 
 		var shoes =
 		["shoe1", "shoe2", "shoe3"]
 
 		shoe.addEventListener("click", function(){
+			shoesClickCounter = shoesClickCounter +1;
+
 			shoesCounter = shoesCounter +1;
-			// var math = Math.round(Math.random()*2)
+			
 			console.log(shoesCounter);
 
 			console.log(shoes[shoesCounter])
@@ -343,14 +351,18 @@
 		ins.style.opacity = 0;
 		shoel.style.opacity =0;
 		sockl.style.opacity =1
+
+		if (shoesClickCounter>=1 && sockClickCounter>=1){sockl.style.opacity =0};
 	})
 
 		var belts =
 		["belt1", "belt2", "belt3", "belt4"]
 
 		belt.addEventListener("click", function(){
+			beltClickCounter = beltClickCounter +1;
+			if (pantsClickCounter>1){beltl.style.opacity =0};
 			beltCounter = beltCounter +1;
-			// var math = Math.round(Math.random()*3)
+			
 			console.log(beltCounter);
 
 			console.log(belts[beltCounter])
@@ -371,7 +383,7 @@
 			necklaceClickCounter = necklaceClickCounter +1;
 			if (shirtClickCounter>1){necklacel.style.opacity =0};
 			necklaceCounter = necklaceCounter +1;
-			// var math = Math.round(Math.random()*3)
+			
 			console.log(necklaceCounter);
 
 			console.log(necklaces[necklaceCounter])
@@ -388,8 +400,10 @@
 		["sock1", "sock2", "sock3", "sock4",]
 
 		sock.addEventListener("click", function(){
+			sockClickCounter = sockClickCounter +1;
+			if (shoesClickCounter>1){sockl.style.opacity =0};
 			sockCounter = sockCounter +1;
-			// var math = Math.round(Math.random()*3)
+			
 			console.log(sockCounter);
 
 			console.log(socks[sockCounter])
