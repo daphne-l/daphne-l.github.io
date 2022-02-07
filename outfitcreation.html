@@ -8,7 +8,7 @@
 			background-color: #bda799;
 			overflow: hidden;
 		}
-		#arrow{
+		#arrow1{
 			background-image: url(arrow.png);
 			width:250px;
 			height:250px;
@@ -16,6 +16,36 @@
 			top: 220px;
 			left: 400px;
 			transform:rotate(-10deg);
+			background-size:contain;
+			background-repeat: no-repeat;
+  			background-position: center;
+			transition:.3s;
+			opacity: 1;
+		}
+
+		#arrow2{
+			background-image: url(arrow.png);
+			width:250px;
+			height:250px;
+			position: absolute;
+			top: 0px;
+			left: 770px;
+			transform:rotate(190deg);
+			background-size:contain;
+			background-repeat: no-repeat;
+  			background-position: center;
+			transition:.3s;
+			opacity: 1;
+		}
+
+		#arrow3{
+			background-image: url(arrow.png);
+			width:250px;
+			height:250px;
+			position: absolute;
+			top: 550px;
+			left: 770px;
+			transform:rotate(170deg);
 			background-size:contain;
 			background-repeat: no-repeat;
   			background-position: center;
@@ -70,7 +100,33 @@
 			height:150px;
 			position: absolute;
 			top: 300px;
-			left: 270px;
+			left: 290px;
+			background-size:contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			transition:.3s;
+		}
+
+		#necklace{
+			background-color: ;
+			width:150px;
+			height:150px;
+			position: absolute;
+			top: 100px;
+			left: 1000px;
+			background-size:contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			transition:.3s;
+		}
+
+		#sock{
+			background-color: ;
+			width:150px;
+			height:150px;
+			position: absolute;
+			top: 600px;
+			left: 1000px;
 			background-size:contain;
 			background-repeat: no-repeat;
 			background-position: center;
@@ -87,6 +143,7 @@
 			color: #947a6a;
 			font-style: italic;
 			transition:.3s;
+			z-index: -10;
 		}
 
 		#shirtl{
@@ -131,7 +188,7 @@
 		#beltl{
 			position: absolute;
 			top: 320px;
-			left: 320px;
+			left: 340px;
 			font-size: 30px;
 			font-family: sans-serif;
 			font-weight: 500;
@@ -141,37 +198,93 @@
 			z-index: -10;
 		}
 
+		#necklacel{
+			position: absolute;
+			top: 100px;
+			left: 1000px;
+			font-size: 30px;
+			font-family: sans-serif;
+			font-weight: 500;
+			color: #947a6a;
+			font-style: italic;
+			transition:.3s;
+			z-index: -10;
+		}
+
+		#sockl{
+			position: absolute;
+			top: 600px;
+			left: 1050px;
+			font-size: 30px;
+			font-family: sans-serif;
+			font-weight: 500;
+			color: #947a6a;
+			font-style: italic;
+			transition:.3s;
+			z-index: -10;
+		}
+
+
 	</style>
 </head>
 <body>
-	<div id="arrow"></div>
+	<div id="arrow1"></div>
+	<div id="arrow2"></div>
+	<div id="arrow3"></div>
 	<div id="shirt"></div>
 	<div id="pant"></div>
 	<div id="shoe"></div>
 	<div id="belt"></div>
+	<div id="sock"></div>
+	<div id="necklace"></div>
 	<div id="ins"> <p> click to generate clothing <33 </p> </div>
 	<div id="shirtl"> <p> shirt </p> </div>
 	<div id="pantl"> <p> pants </p> </div>
-	<div id="shoel"> <p> shoe </p> </div>
+	<div id="shoel"> <p> shoes </p> </div>
 	<div id="beltl"> <p> belt </p> </div>
+	<div id="sockl"> <p> sock </p> </div>
+	<div id="necklacel"> <p> necklace </p> </div>
 
 	<script type="text/javascript">
+		var shirtClickCounter=0;
+		var necklaceClickCounter=0;
+		var pantsClickCounter=0
 
 		var shirtCounter = 0;
 		var pantsCounter =0;
 		var shoesCounter =0;
 		var beltCounter = 0;
+		var necklaceCounter = 0;
+		var sockCounter = 0;
 
-		var arrow= document.getElementById("arrow");
-		arrow.style.opacity=0
+		var beltl= document.getElementById("beltl");
+		beltl.style.opacity=0
+		var necklacel= document.getElementById("necklacel");
+		necklacel.style.opacity=0
+		var sockl= document.getElementById("sockl");
+		sockl.style.opacity=0
+
+		var arrow1= document.getElementById("arrow1");
+		arrow1.style.opacity=0
 		pant.addEventListener("click", function() { 
-		arrow.style.opacity=1})
-		belt.addEventListener("click", function() { 
-		arrow.style.opacity=1})
+		arrow1.style.opacity=1})
+
+		var arrow2= document.getElementById("arrow2");
+		arrow2.style.opacity=0
+		shirt.addEventListener("click", function() { 
+		arrow2.style.opacity=1})
+
+		var arrow3= document.getElementById("arrow3");
+		arrow3.style.opacity=0
+		shoe.addEventListener("click", function() { 
+		arrow3.style.opacity=1})
 
 		var shirts =
 		["shirt1", "shirt2", "shirt3", "shirt4", "shirt5", "shirt6", "shirt7"]
 		shirt.addEventListener("click", function(){
+			shirtClickCounter = shirtClickCounter +1;
+
+
 			shirtCounter = shirtCounter +1;
 			// var math = Math.round(Math.random()*6)
 			console.log(shirtCounter);
@@ -181,10 +294,15 @@
 			if (shirtCounter > 6) {shirtCounter = 0}
 
 			var shirtImage = document.getElementById("shirt");
-		shirtImage.style.backgroundImage =  "url(" + shirts[shirtCounter] +".png)";
+		shirtImage.style.backgroundImage =  "url(./clothing/" + shirts[shirtCounter] +".png)";
 
 		ins.style.opacity = 0;
 		shirtl.style.opacity =0;
+		necklacel.style.opacity =1;
+
+		if (shirtClickCounter>1 && necklaceClickCounter>1){necklacel.style.opacity =0};
+		
+		
 	})
 
 		var pants =
@@ -200,10 +318,11 @@
 			if (pantsCounter > 5) {pantsCounter = 0}
 
 			var pantImage = document.getElementById("pant");
-		pantImage.style.backgroundImage =  "url(" + pants[pantsCounter] +".png)";
+		pantImage.style.backgroundImage =  "url(./clothing/" + pants[pantsCounter] +".png)";
 
 		ins.style.opacity = 0;
 		pantl.style.opacity =0;
+		beltl.style.opacity =1;
 	})
 
 		var shoes =
@@ -219,10 +338,11 @@
 			if (shoesCounter > 2) {shoesCounter = 0}
 
 			var shoeImage = document.getElementById("shoe");
-		shoeImage.style.backgroundImage =  "url(" + shoes[shoesCounter] +".png)";
+		shoeImage.style.backgroundImage =  "url(./clothing/" + shoes[shoesCounter] +".png)";
 
 		ins.style.opacity = 0;
 		shoel.style.opacity =0;
+		sockl.style.opacity =1
 	})
 
 		var belts =
@@ -238,10 +358,48 @@
 			if (beltCounter > 3) {beltCounter = 0}
 
 			var beltImage = document.getElementById("belt");
-		beltImage.style.backgroundImage =  "url(" + belts[beltCounter] +".png)";
+		beltImage.style.backgroundImage =  "url(./clothing/" + belts[beltCounter] +".png)";
 
-		ins.style.opacity = 0;
 		beltl.style.opacity =0;
+	})
+
+		var necklaces =
+		["necklace1", "necklace2", "necklace3", "necklace4", "necklace5"]
+
+		necklace.addEventListener("click", function(){
+
+			necklaceClickCounter = necklaceClickCounter +1;
+			if (shirtClickCounter>1){necklacel.style.opacity =0};
+			necklaceCounter = necklaceCounter +1;
+			// var math = Math.round(Math.random()*3)
+			console.log(necklaceCounter);
+
+			console.log(necklaces[necklaceCounter])
+
+			if (necklaceCounter > 4) {necklaceCounter = 0}
+
+			var necklaceImage = document.getElementById("necklace");
+		necklaceImage.style.backgroundImage =  "url(./clothing/" + necklaces[necklaceCounter] +".png)";
+
+		necklacel.style.opacity =0;
+	})
+
+		var socks =
+		["sock1", "sock2", "sock3", "sock4",]
+
+		sock.addEventListener("click", function(){
+			sockCounter = sockCounter +1;
+			// var math = Math.round(Math.random()*3)
+			console.log(sockCounter);
+
+			console.log(socks[sockCounter])
+
+			if (sockCounter > 3) {sockCounter = 0}
+
+			var sockImage = document.getElementById("sock");
+		sockImage.style.backgroundImage =  "url(./clothing/" + socks[sockCounter] +".png)";
+
+		sockl.style.opacity =0;
 	})
 
 
