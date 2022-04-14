@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+
+		body{
+			overflow: hidden;
+		}
+
+		#gif{
+			background-image: url("hearttunnel.gif"); 
+			background-size: cover;
+			background-repeat: no-repeat;
+  			width: 1000px;
+  			height: 600px;
+  			top: 100px;
+  			left: 100px;
+		}
+		#title{
+		position: absolute;
+			top: 100px;
+			left: 400px;
+			font-size: 50px;
+			font-family: sans-serif;
+			font-weight: 500;
+			color: white;
+			font-style: italic;
+			text-align: center;
+	}
+		#text{
+			color: white;
+			font-size: 30px;
+			font-family: noto sans, sans-serif;
+			font-style: italic;
+			text-align: center;
+			position: relative;
+			left: 0px;
+			top: 360px;
+		}
+		
+	</style>
+
+</head>
+<body>
+	<div id="title"> <p>Some reasons why I love you...</p></div>
+	<div id="text"> <p> <3</p> </div>
+	<div id="gif"> </div>
+
+	<script type="text/javascript">
+		var text = document.getElementById('text');
+		var words = ["you do small favors for me", "you show me cute videos of Cal", "you complain to me about how hockey fights aren't as good as they used to be", "you give me gum and other food", "you're there for me"]
+		function changeWords() {
+			var random = Math.floor(Math.random()*4)
+
+		text.innerText = words[random]
+		}
+		
+		var x = setInterval(changeWords, 5000)
+
+	</script>
+</body>
+</html>

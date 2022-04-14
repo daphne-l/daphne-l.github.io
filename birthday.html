@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+		background-color: #ffe8a8;
+		overflow: hidden;
+		}
+		#title{
+			position: absolute;
+			top: 120px;
+			left: 500px;
+			font-size: 50px;
+			font-family: sans-serif;
+			font-weight: 500;
+			color: #947a6a;
+			font-style: italic;
+			transition:.3s;
+			z-index: -10;
+
+		}
+		#ins{
+			position: absolute;
+			top: 500px;
+			left: 620px;
+			font-size: 30px;
+			font-family: sans-serif;
+			font-weight: 500;
+			color: #947a6a;
+			font-style: italic;
+			transition:.3s;
+			z-index: -10;
+		}
+		#photo{
+			position: absolute;
+			top: 400px;
+			left: 570px;
+			height: 300px;
+			width: 300px;
+			background-color: ;
+			background-repeat: no-repeat;
+			background-size:contain;
+		}
+
+		#one{
+			position: absolute;
+			top: 250px;
+			left: 50px;
+			height: 300px;
+			width: 300px;
+			background-image: url(cube1.png);
+			background-repeat: no-repeat;
+			background-size:contain;
+		opacity: 0;
+		}
+
+		#two{
+			position: absolute;
+			top: 550px;
+			left: 250px;
+			font-size: 30px;
+			font-family: sans-serif;
+			font-weight: 500;
+			color: #947a6a;
+			font-style: italic;
+			transition:.3s;
+			z-index: -10;
+	opacity: 0;
+		}
+
+		#three{
+			position: absolute;
+			top: 300px;
+			left: 900px;
+			height: 250px;
+			width: 250px;
+			background-image: url(cube2.png);
+			background-repeat: no-repeat;
+			background-size:contain;
+opacity: 0;
+		}
+		#four{
+			position: absolute;
+			top: 550px;
+			left: 1100px;
+			font-size: 30px;
+			font-family: sans-serif;
+			font-weight: 500;
+			color: #947a6a;
+			font-style: italic;
+			transition:.3s;
+			z-index: -10;
+opacity: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="ins"> <p> Hover over and <br> click this area! </p></div>
+	<div id="photo"> </div>
+	<div id="title"> <p> Happy Birthday Dad!</p></div>
+	<div id="one"> </div>
+	<div id="two"> <p> We love you!</p></div>
+	<div id="three"> </div>
+	<div id="four"> <p> Have a good day!</p></div>
+	<script type="text/javascript">
+		var photoImage = document.getElementById("photo")
+		var counter = 0
+
+			photoImage.addEventListener("mouseover", function(){
+	
+		photoImage.style.backgroundImage =  "url(dad1.png)";
+		ins.style.opacity = "0";
+
+	})
+		photoImage.addEventListener("mouseleave", function(){
+	
+		photoImage.style.backgroundImage =  "url(dad2.png)";
+		ins.style.opacity = "0";
+
+	})
+		function clickCount (){
+		counter = counter +1
+
+if (counter == 1) {
+one.style.opacity = "1"
+ins.style.opacity = "0"
+};
+if (counter == 2) {
+two.style.opacity = "1"
+ins.style.opacity = "0"
+};
+if (counter == 3) {
+three.style.opacity = "1"
+ins.style.opacity = "0"
+};
+if (counter == 4) {
+four.style.opacity = "1"
+ins.style.opacity = "0"
+};
+
+}
+
+document.addEventListener("click", clickCount)
+
+
+
+	</script>
+</body>
+</html>

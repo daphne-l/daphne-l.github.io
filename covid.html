@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+			overflow: hidden;
+			background-color: #afc9b5;
+		}
+
+		.virus{
+			background-color: #94b59c;
+			background-size: cover;
+			width: 125px;
+			height: 125px;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<div id="counter"> </div>
+
+	<script type="text/javascript">
+		var clickCounter=0
+		var pew = document.getElementById('sound');
+		// var input = document.getElementById('input');
+		var x=0;
+
+		function createCorona() {
+			var corona = document.createElement('div');
+			document.body.appendChild(corona);
+			corona.classList.add("virus");
+		
+		function changePosition() {
+			corona.style.left = 1000 *Math.random() + "px";
+			corona.style.top = 1000 *Math.random() + "px"; };
+
+		corona.addEventListener("click", function(){
+			console.log("hi")
+			x=x+1;
+			corona.classList.remove("virus");
+			
+			clickCounter = clickCounter +1;
+			counter.innerText = "square is touched! and you're score is " +clickCounter;
+
+			
+			console.log(clickCounter);
+			})
+
+
+		setInterval(changePosition, 800)
+
+	};
+
+
+	setInterval(createCorona, 2000);
+	</script>
+</body>
+</html>
