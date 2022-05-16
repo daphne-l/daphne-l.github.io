@@ -3,6 +3,7 @@
 <head>
 	<style type="text/css">
 	body {
+
 	background-image: url("journalbg.jpg");
   background-repeat: no-repeat;
   background-position: right top;
@@ -10,7 +11,16 @@
   background-size: cover;
   overflow: hidden;
 }
-
+.overlay{
+  width: 100%;
+  height: 100%;
+  background-image: url("journaloverlay.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0px;
+  left: 0px;
+  z-index: 50;
+}
 #back{
   color: black;
   font-size: 30px;
@@ -19,6 +29,7 @@
   position: absolute;
   left: 30px;
   top: 700px;
+  z-index: 100;
 }
 
 		 h1 {
@@ -48,8 +59,13 @@
 <body>
 
 </body>
+<div class="overlay" id="cover"></div>
 <a href="index.html"><div id="back"> <p>back</p></div></a>
 	<div class="scroll">
+
+		 <p><b>Entry 14</b></p>
+<p>I tried to finish my karaoke project this week but I had trouble figuring out how to make the scroll div scroll automatically at certain times intervals. I looked it up and asked Molly but it was too complicated so I decided to just leave it the way it is where you need to scroll manually. Next week I’m going to work on my story presentation. I think I’m going to use google slides instead of reveal.js because I am more comfortable with google slides.
+</p> 
     <p><b>Entry 13</b></p>
 <p>This week I mainly worked on a birthday card for my father because his birthday is this week on April 14th (the day after mine). To do this I used a lot of event listeners so the website would do stuff after you click and hover over the central image. This project was difficult because I wasn’t able to get much help because I didn’t have much time to finish it. In the end I was able to get it to work before his birthday and he really liked it!
 </p> 
